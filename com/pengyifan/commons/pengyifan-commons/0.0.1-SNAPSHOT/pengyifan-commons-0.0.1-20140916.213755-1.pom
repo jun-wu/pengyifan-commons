@@ -7,6 +7,13 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <repositories>
+    <repository>
+      <id>bitbucket.repo</id>
+      <name>BioC</name>
+      <url>https://bitbucket.org/yfpeng/bioc/raw/releases</url>
+    </repository>
+  </repositories>
   <build>
     <plugins>
       <plugin>
@@ -57,9 +64,9 @@
         </executions>
       </plugin>
       <plugin>
-      	<groupId>org.apache.maven.plugins</groupId>
-      	<artifactId>maven-source-plugin</artifactId>
-      	<version>2.3</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.3</version>
         <executions>
           <execution>
             <id>attach-sources</id>
@@ -72,6 +79,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
         <executions>
           <execution>
             <id>attach-javadocs</id>
@@ -120,11 +128,9 @@
       <version>1.0.3</version>
     </dependency>
     <dependency>
-      <groupId>bioc</groupId>
+      <groupId>org.biocreative.bioc</groupId>
       <artifactId>bioc</artifactId>
-      <version>1.0</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/lib/bioc.jar</systemPath>
+      <version>2.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
